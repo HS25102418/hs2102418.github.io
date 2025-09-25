@@ -6,7 +6,7 @@
   <title>Radawa Laknath | Portfolio</title>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
   <style>
-    /* ---------- Global & Reset ---------- */
+    /* ---------- Global ---------- */
     * { margin: 0; padding: 0; box-sizing: border-box; }
     html { scroll-behavior: smooth; }
     body {
@@ -17,11 +17,10 @@
     }
     a { color: inherit; text-decoration: none; }
 
-    /* ---------- Layout ---------- */
+    /* ---------- Sidebar ---------- */
     .nav {
       position: fixed;
-      top: 0;
-      left: 0;
+      top: 0; left: 0;
       width: 200px;
       height: 100%;
       background: #fff;
@@ -32,28 +31,25 @@
       list-style: none;
       padding: 0 20px;
     }
-    .nav li {
-      margin: 20px 0;
-    }
+    .nav li { margin: 20px 0; }
     .nav a {
       font-weight: 500;
       font-size: 1rem;
       transition: color 0.3s;
     }
-    .nav a:hover {
-      color: #0071e3;
-    }
+    .nav a:hover { color: #0071e3; }
 
+    /* ---------- Main Area ---------- */
     .main {
       margin-left: 200px;
       padding: 40px;
     }
 
     section {
-      max-width: 800px;
+      max-width: 850px;
       margin-bottom: 60px;
       background: #fff;
-      border-radius: 10px;
+      border-radius: 12px;
       box-shadow: 0 4px 16px rgba(0,0,0,0.08);
       overflow: hidden;
       opacity: 0;
@@ -64,55 +60,45 @@
       opacity: 1;
       transform: translateY(0);
     }
-    section .content {
-      padding: 30px;
-    }
+    section .content { padding: 30px; }
     section h2 {
       font-size: 1.8rem;
       margin-bottom: 20px;
+      font-weight: 600;
     }
 
+    /* ---------- Intro Section ---------- */
     .intro {
       display: flex;
+      flex-wrap: wrap;
       align-items: center;
-      padding: 60px 30px;
+      padding: 50px 30px;
     }
-    .intro .text {
-      flex: 1;
-    }
+    .intro .text { flex: 1; }
     .intro h1 {
-      font-size: 2.5rem;
+      font-size: 2.3rem;
       margin-bottom: 10px;
     }
-    .intro p {
-      font-size: 1.1rem;
-      color: #666;
-    }
-    .intro .buttons {
-      margin-top: 20px;
-    }
+    .intro p { font-size: 1.1rem; color: #555; }
+    .intro .buttons { margin-top: 20px; }
+
     .btn {
       display: inline-block;
-      padding: 10px 24px;
+      padding: 10px 22px;
       border-radius: 6px;
       font-weight: 500;
       transition: background 0.3s, color 0.3s;
       margin-right: 12px;
     }
     .btn-primary {
-      background: #0071e3;
-      color: #fff;
+      background: #0071e3; color: #fff;
     }
-    .btn-primary:hover {
-      background: #005bb5;
-    }
+    .btn-primary:hover { background: #005bb5; }
     .btn-outline {
-      border: 2px solid #0071e3;
-      color: #0071e3;
+      border: 2px solid #0071e3; color: #0071e3;
     }
     .btn-outline:hover {
-      background: #0071e3;
-      color: #fff;
+      background: #0071e3; color: #fff;
     }
 
     .intro .photo {
@@ -136,11 +122,12 @@
 </head>
 <body>
 
-  <!-- Sidebar / Navigation -->
+  <!-- Sidebar -->
   <nav class="nav">
     <ul>
       <li><a href="#home">Home</a></li>
-      <li><a href="#about">About Me</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#education">Education</a></li>
       <li><a href="#work">Work & Projects</a></li>
       <li><a href="#skills">Skills</a></li>
       <li><a href="#contact">Contact</a></li>
@@ -148,7 +135,7 @@
   </nav>
 
   <div class="main">
-    <!-- Intro / Hero Section -->
+    <!-- Intro -->
     <section id="home" class="visible">
       <div class="intro content">
         <div class="text">
@@ -165,28 +152,45 @@
       </div>
     </section>
 
-    <!-- About Me -->
+    <!-- About -->
     <section id="about">
       <div class="content">
         <h2>About Me</h2>
-        <p>I’m a Biotechnology graduate with expertise in molecular biology, bioinformatics, and lab techniques. I aim to apply my skills to innovative research in healthcare, agriculture, and environment.</p>
+        <p>
+          I am an enthusiastic Biotechnology graduate with strong academic and research experience 
+          in molecular biology, bioinformatics, and analytical laboratory techniques. 
+          My passion lies in applying biotechnology to healthcare, agriculture, 
+          and environmental sustainability.
+        </p>
+      </div>
+    </section>
+
+    <!-- Education -->
+    <section id="education">
+      <div class="content">
+        <h2>Education</h2>
+        <ul>
+          <li><b>B.Sc. (Hons) in Biotechnology</b> – SLIIT, Sri Lanka (First Class Honours, 2025)</li>
+          <li><b>Advanced Level (A/L)</b> – Badulla Central College (Biology S, Physics C, Chemistry C)</li>
+          <li><b>Ordinary Level (O/L)</b> – Badulla Central College</li>
+        </ul>
       </div>
     </section>
 
     <!-- Work & Projects -->
     <section id="work">
       <div class="content">
-        <h2>Work & Projects</h2>
+        <h2>Work Experience & Projects</h2>
         <p><strong>Intern — IBMBB, University of Colombo</strong></p>
         <ul>
-          <li>Assisted in molecular biology & biochemistry experiments</li>
-          <li>Performed data analysis and generated reports</li>
+          <li>Assisted in molecular biology and biochemistry experiments.</li>
+          <li>Conducted data analysis and prepared reports.</li>
         </ul>
-        <p>Projects:</p>
+        <p><strong>Projects</strong></p>
         <ul>
           <li>Bioinformatics pipeline for sequence analysis</li>
-          <li>Protein expression workflow & SDS-PAGE optimization</li>
-          <li>ELISA assays with standard curve development</li>
+          <li>Protein expression and SDS-PAGE optimization</li>
+          <li>ELISA assay standard curve and data analysis</li>
         </ul>
       </div>
     </section>
@@ -197,8 +201,9 @@
         <h2>Skills</h2>
         <ul>
           <li>PCR, Gel Electrophoresis, ELISA, SDS-PAGE, Western Blotting</li>
-          <li>Bioinformatics, Sequence Analysis, Python</li>
-          <li>Project Management, Teamwork, Communication</li>
+          <li>Bioinformatics tools and sequence analysis</li>
+          <li>Project Management, Teamwork, Leadership</li>
+          <li>Effective Communication & Critical Thinking</li>
         </ul>
       </div>
     </section>
@@ -206,35 +211,34 @@
     <!-- Contact -->
     <section id="contact">
       <div class="content">
-        <h2>Contact Me</h2>
+        <h2>Contact</h2>
         <p>Email: <a href="mailto:radawalaknath80@gmail.com">radawalaknath80@gmail.com</a></p>
         <p>Phone: 0786427649</p>
         <p>Address: 10B, Maderiya Road, Badulla</p>
       </div>
     </section>
 
+    <!-- Footer -->
     <footer>
       © <span id="year"></span> Radawa Laknath — Portfolio
     </footer>
   </div>
 
   <script>
-    // Set year
+    // Auto year
     document.getElementById('year').textContent = new Date().getFullYear();
 
-    // Reveal sections on scroll
+    // Reveal on scroll
     const sections = document.querySelectorAll('section');
-    const revealOnScroll = () => {
+    const reveal = () => {
       const trigger = window.innerHeight * 0.8;
       sections.forEach(sec => {
         const top = sec.getBoundingClientRect().top;
-        if (top < trigger) {
-          sec.classList.add('visible');
-        }
+        if (top < trigger) sec.classList.add('visible');
       });
     };
-    window.addEventListener('scroll', revealOnScroll);
-    revealOnScroll();
+    window.addEventListener('scroll', reveal);
+    reveal();
   </script>
 </body>
 </html>
